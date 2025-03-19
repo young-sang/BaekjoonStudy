@@ -3,7 +3,7 @@ while True:
     a = list(map(int, input()))
     c = a.copy()
     b = []
-    12
+    
     if a[0] == 0:
         break
     
