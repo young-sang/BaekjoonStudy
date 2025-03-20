@@ -6,4 +6,4 @@ def fec(a):
 
 N, K = map(int, input().split())
 
-print(fec(N) / (fec(K) * fec(N-K)))
+print(int(fec(N) / (fec(K) * fec(N-K))))
