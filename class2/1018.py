@@ -12,10 +12,8 @@ alpa = ['W', 'B']
 resarr = []
 for i in range(N - 8 + 1):
     for j in range(M - 8 + 1):
-        minCount = 0
         wcount = 0
         bcount = 0
-        print(arr[i][j])
         
         for y in range(8):
             for x in range(8):
@@ -46,17 +44,14 @@ for i in range(N - 8 + 1):
                         numSpel = alpa[0]   
                     else:
                         numSpel = alpa[1]
-                # print(arr[i+y][j+x])
-                # print(numSpel)
-                # print("=======")
                 if arr[i+y][j+x] != numSpel:
                     bcount += 1
 
         if wcount >= bcount:
-            minCount = bcount
+            resarr.append(bcount)
         else:
-            minCount = wcount
-        resarr.append(minCount)
+            resarr.append(wcount)
+        
 
 print(min(resarr))
 
