@@ -13,6 +13,6 @@ for i in range(N) :
                 stack.append(')')
                 break
     if len(stack) == 0 :
-        print('yes')
+        print('YES')
     else :
-        print('no')
+        print('NO')
