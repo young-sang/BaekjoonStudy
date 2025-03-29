@@ -25,7 +25,7 @@ def top():
 N = int(input())
 
 for i in range(N):
-    a = input()
+    a = sys.stdin.readline().strip()
     if "push" in a:
         b = a.split(' ')
         push(b[1])

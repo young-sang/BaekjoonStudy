@@ -7,7 +7,7 @@ def push(x):
 def pop():
     if len(stack) == 0:
         return -1
-    return stack.pop()
+    return stack.pop(0)
 
 def size():
     return len(stack)
@@ -17,7 +17,12 @@ def empty():
         return 1
     return 0
 
-def top():
+def front():
+    if len(stack) == 0:
+        return -1
+    return stack[0]
+
+def back():
     if len(stack) == 0:
         return -1
     return stack[len(stack) - 1]
@@ -25,7 +30,7 @@ def top():
 N = int(input())
 
 for i in range(N):
-    a = input()
+    a = sys.stdin.readline().strip()
     if "push" in a:
         b = a.split(' ')
         push(b[1])
@@ -35,5 +40,7 @@ for i in range(N):
         print(size())
     elif "empty" in a:
         print(empty())
-    elif "top" in a:
-        print(top())
+    elif "front" in a:
+        print(front())
+    elif "back" in a:
+        print(back())
