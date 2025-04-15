@@ -3,6 +3,6 @@ while True:
     if a == 0 and b == 0:
         break
     if a > b:
-        print("YES")
+        print("Yes")
     else:
-        print("NO")
+        print("No")
